@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Math-Game-VitebsEnergo</title>
+</head>
+<body class="container-md">
+    <div class="trueFalse">
+        <div class="correct" id="correct">Верно!</div> 
+        <div class="wrong" id="wrong">Ебать ты лох</div>
+    </div>
+    <div class="container_game" id="container">
+        <div class="score" id="score">Очки:<span id="score__value">0</span></div>
+        <div class="timeremaining" id="timeremaining">Осталось:<span id="timeremainingvalue"></span>Сек</div>
+            <div class="question" id="question"></div>
+            <div class="info" id="info">Выберите один из правильных ответов</div>
+            <div class="choices" id="choices">
+                <div id="box1" class="box text-center"></div>
+                <div id="box2" class="box text-center"></div>
+                <div id="box3" class="box text-center"></div>
+                <div id="box4" class="box text-center"></div>
+            </div>
+            <button class="start_reset btn btn-outline-success" id="start__reset">Начать игру</button>
+
+            <div class="game_over" id="game__over"></div>
+        </div>   
+        <script src="./script/main.js"></script>
+</body>
+</html>
