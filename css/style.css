@@ -5,6 +5,7 @@ body {
 
 .container_game {
   position: relative;
+  background-color: #444C5C;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +22,6 @@ body {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 70px;
-  background-color: #444C5C;
 }
 
 .score {
@@ -199,15 +199,15 @@ span {
           align-items: center;
 }
 
-.game-over {
+.game_over {
   width: 500px;
   height: 200px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f3c76b), to(#f3746c));
-  background: linear-gradient(#f3c76b, #f3746c);
-  color: #fff;
+  background-color: #e1b16a;
+  color: #ce5a57;
   font-size: 2.5em;
-  text-transform: uppercase;
   position: absolute;
+  text-transform: uppercase;
+  text-align: center;
   top: 100px;
   left: 45px;
   z-index: 2;

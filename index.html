@@ -10,9 +10,12 @@
     <title>Math-Game-VitebsEnergo</title>
 </head>
 <body class="container-md">
+    <audio id="myAudio">
+        <source src="./music/wrong.mp3" type="audio/mpeg">
+    </audio>
     <div class="trueFalse">
         <div class="correct" id="correct">Верно!</div> 
-        <div class="wrong" id="wrong">Ебать ты лох</div>
+        <div class="wrong" id="wrong">Не верно!</div>
     </div>
     <div class="container_game" id="container">
         <div class="score" id="score">Очки:<span id="score__value">0</span></div>
@@ -26,7 +29,6 @@
                 <div id="box4" class="box text-center"></div>
             </div>
             <button class="start_reset btn btn-outline-success" id="start__reset">Начать игру</button>
-
             <div class="game_over" id="game__over"></div>
         </div>   
         <script src="./script/main.js"></script>

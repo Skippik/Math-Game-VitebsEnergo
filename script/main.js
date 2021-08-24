@@ -4,7 +4,9 @@ const timeRemainingValue = document.getElementById('timeremainingvalue');
 const startReset = document.getElementById('start__reset');
 const gameOver = document.getElementById('game__over');
 const question = document.getElementById('question');
+const audio = document.getElementById("myAudio");  
 
+console.log(audio);
 //понаделать переменных
 
 
@@ -35,12 +37,13 @@ play.onclick = function(){
         hide("game__over");
         show("timeremaining");
         //делаем обратный отсчёт
-        timeremaining = 60;
+        timeremaining = 5; // Время игры
         timeRemainingValue.innerHTML = timeremaining;
         startCountdown();
-        
+        startReset.classList.toggle('btn-outline-danger');
+        startReset.classList.remove('btn-outline-success');
         startReset.innerHTML= "Новая Игра"    
-        generateQA();  // проверить эту функцию на красоту
+        generateQA();  
     }
 }
 function startCountdown(){
@@ -54,7 +57,7 @@ function startCountdown(){
             clearInterval(action);              
             
             //Экран окончания игры
-            gameOver.innerHTML ="<p>Вы проиграли =(</p><p>Вы заработали: " + score + 'очков' +".</p>"; 
+            gameOver.innerHTML ="<p>Игра завершена! </p><p>Вы заработали:<br> " + score +  "  " + 'очков' +".</p>"; 
             
             show("game__over");
             hide("timeremaining");  
@@ -89,11 +92,11 @@ for(i=1;i<5;i++){
         }else{
             //Проверяем на неверность 
             hide("correct");        //прячем верно
-            show("wrong");          // показываем не верное
+            show("wrong");     
+            audio.play();     // показываем не верное
             setTimeout(function(){
                 hide("wrong");
             },1000);
-            
             }
         }
     }
