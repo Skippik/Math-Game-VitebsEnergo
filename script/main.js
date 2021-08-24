@@ -37,7 +37,7 @@ play.onclick = function(){
         hide("game__over");
         show("timeremaining");
         //делаем обратный отсчёт
-        timeremaining = 5; // Время игры
+        timeremaining = 60; // Время игры
         timeRemainingValue.innerHTML = timeremaining;
         startCountdown();
         startReset.classList.toggle('btn-outline-danger');
